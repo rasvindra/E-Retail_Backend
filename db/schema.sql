@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS eretail_db;
+CREATE DATABASE eretail_db;
