@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require("bcrypt");
 
-class Tags extends Model {}
+class Tag extends Model {}
 
-Tags.init({
+Tag.init({
     // add properites here, ex:
   tag_name:{
     type:DataTypes.STRING,
@@ -19,4 +19,4 @@ Tags.init({
     // }
 });
 
-module.exports=User
+module.exports=Tag

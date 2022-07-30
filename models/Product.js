@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require("bcrypt");
 
-class Products extends Model {}
+class Product extends Model {}
 
-Products.init({
+Product.init({
   product_name:{
     type:DataTypes.STRING,
     allowNull:false
@@ -16,23 +16,23 @@ Products.init({
     validate:{
         isDecimal:true
     }
-},
+  },
   stock:{
-    type:DataTypes.INTERGER,
+    type:DataTypes.INTEGER,
     allowNull:false,
     default:10,
     validate:{
         isNumeric:true
     }
-},
+  },
   catergory_id:{
-    type:DataTypes.INTERGER,
+    type:DataTypes.INTEGER,
     allowNull:false,
     default:10,
     validate:{
         isNumeric:true
     }
-}
+  }
 },{
     sequelize,
     // hooks:{
@@ -42,4 +42,4 @@ Products.init({
     // }
 });
 
-module.exports=User
+module.exports=Product

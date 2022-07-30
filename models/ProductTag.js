@@ -6,12 +6,12 @@ class ProductTag extends Model {}
 
 ProductTag.init({
   product_id:{
-    type:DataTypes.INTERGER,
+    type:DataTypes.INTEGER,
     allowNull:false
   },
   tag_id:{
-    type:DataTypes.INTERGER,
-}
+    type:DataTypes.INTEGER,
+  }
 },{
     sequelize,
     // hooks:{
@@ -21,4 +21,4 @@ ProductTag.init({
     // }
 });
 
-module.exports=User
+module.exports=ProductTag

@@ -20,4 +20,4 @@ Category.init({
     // }
 });
 
-module.exports=User
+module.exports=Category
