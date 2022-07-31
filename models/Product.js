@@ -10,7 +10,7 @@ Product.init({
     allowNull:false
   },
   price:{
-    type:DataTypes.DECIMAL,
+    type:DataTypes.DECIMAL(8,2),
     allowNull:false,
     unique:true,
     validate:{
