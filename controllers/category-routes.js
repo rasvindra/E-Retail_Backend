@@ -7,10 +7,6 @@ router.get("/",async (req,res)=>{
         const categorys = await Category.findAll({
             // make sure associations are correct
             include:[Category,ProductTag],
-            include:[{
-                model:ProductTag,
-                include:[Tag]
-            }]
         })
         res.status(200).json(categorys)
     } catch (err) {
@@ -61,7 +57,7 @@ router.put("/:id",(req,res)=>{
         }
         }).then(category=>{
             if(!category[0]){
-                return res.status(404).json({msg:"No such Category Exists or Change Not Made!"})
+                return res.status(404).json({msg:"No such Category Exists or the Change was Not Made!"})
             }
         res.json(category)
     }).catch(err=>{

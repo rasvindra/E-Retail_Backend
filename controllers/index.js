@@ -8,8 +8,8 @@ router.get("/",(req,res)=>{
     res.send("routing!")
 })
 
-router.use("/api/Products",productRoutes)
-router.use("/api/Categorys",categoryRoutes)
-router.use("/api/Tags",tagRoutes)
+router.use("/api/products",productRoutes)
+router.use("/api/categorys",categoryRoutes)
+router.use("/api/tags",tagRoutes)
 
 module.exports = router;

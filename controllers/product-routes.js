@@ -6,10 +6,6 @@ router.get("/",async (req,res)=>{
     try {
         const products = await Product.findAll({
             include:[Category,ProductTag],
-            include:[{
-                model:ProductTag,
-                include:[Tag]
-            }]
         })
         res.status(200).json(products)
     } catch (err) {
@@ -66,7 +62,7 @@ router.put("/:id",(req,res)=>{
         }
         }).then(product=>{
             if(!product[0]){
-                return res.status(404).json({msg:"No such Product Exists or Change Not Made!"})
+                return res.status(404).json({msg:"No such Product Exists or the Change was Not Made!"})
             }
         res.json(product)
     }).catch(err=>{
