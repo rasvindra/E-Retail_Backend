@@ -1,16 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const ProductRoutes = require("./Product-routes")
-const CategoryRoutes = require("./Category-routes")
-const TagRoutes = require("./Tag-routes")
+const productRoutes = require("./product-routes")
+const categoryRoutes = require("./category-routes")
+const tagRoutes = require("./tag-routes")
 
 router.get("/",(req,res)=>{
     res.send("routing!")
 })
 
-router.use("/api/Products",ProductRoutes)
-router.use("/api/Categorys",CategoryRoutes)
-router.use("/api/Tags",TagRoutes)
-router.use("/api/ProductTags",ProductTagRoutes)
+router.use("/api/Products",productRoutes)
+router.use("/api/Categorys",categoryRoutes)
+router.use("/api/Tags",tagRoutes)
 
 module.exports = router;
