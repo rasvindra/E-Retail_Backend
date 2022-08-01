@@ -5,8 +5,7 @@ const {Product, Category, Tag, ProductTag} = require('../models');
 router.get("/",async (req,res)=>{
     try {
         const tags = await Tag.findAll({
-            // make sure associations are correct
-            include:[Category,Product],
+            include:[Product],
         })
         res.status(200).json(tags)
     } catch (err) {
