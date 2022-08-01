@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const bcrypt = require("bcrypt");
 
 class Product extends Model {}
 
@@ -20,7 +19,7 @@ Product.init({
   stock:{
     type:DataTypes.INTEGER,
     allowNull:false,
-    default:10,
+    defaultValue:10,
     validate:{
         isNumeric:true
     }
@@ -35,11 +34,6 @@ Product.init({
   }
 },{
     sequelize,
-    // hooks:{
-    //     beforeCreate:userObj=>{
-    //         userObj.password = bcrypt.hashSync(userObj.password,4)
-    //     }
-    // }
 });
 
 module.exports=Product

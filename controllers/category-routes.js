@@ -6,7 +6,12 @@ router.get("/",async (req,res)=>{
     try {
         const categorys = await Category.findAll({
             // make sure associations are correct
-            include:[Category,ProductTag],
+            include:[{
+                model:Product,
+                include:[ProductTag],
+                include:[Tag]
+
+            }]
         })
         res.status(200).json(categorys)
     } catch (err) {
