@@ -21,7 +21,7 @@ A project to setup a database using npm packages to be able to seed with data an
 npm packages needed: sequelize mysql2 express dotenv
 
 ## YouTubeLink
-https://www.youtube.com/watch?v=0N6Svobtke4
+https://youtu.be/cBXKklCmLvw
 
 ## Contribution
 NaN
